@@ -18,11 +18,6 @@ int main()
     char letra;
     char Frase[100];
     int sequencia[100];
-    int tabela[29] = { {"1"}, {"2"}, {"3"}, {"4"}, {"5"}, {"6"}, {"7"}, {"8"}, {"9"}, {"10"},
-        {"11"}, {"12"}, {"13"}, {"14"}, {"15"}, {"16"}, {"17"}, {"18"}, {"19"}, {"20"},
-        {"21"}, {"22"}, {"23"}, {"24"}, {"25"}, {"26"}, {"27"}, {"28"}, {"29"}
-    };
-
     char tabela2[] = {'A', ' ', 'B', ' ', 'C', ' ', 'D', ' ', 'E', ' ',
                       'F', ' ', 'G', ' ', 'H', ' ', 'I', ' ', 'J', ' ',
                       'K', ' ', 'L', ' ', 'M', ' ', 'N', ' ', 'O', ' ',
@@ -35,11 +30,11 @@ int main()
 
     printf("1. Gerar A e sua inversa\n2. Ler mensagem e codificar\n3. Imprimir mensagem codificada\n4. Decodificar e imprimir mensagem decodificada\n");
 
-    /* //ComeÁo da leitura da frase e transformar ela em Uma sequencia de numeros
+    /* //Come√ßo da leitura da frase e transformar ela em Uma sequencia de numeros
      printf("\n");
      printf("Digite uma frase Para ser codificada e decodificada: ");
-     //scanf("%s%*c",Frase); // ler uma linha de texto do usu·rio
-     fgets(Frase, 100, stdin); // ler uma linha de texto do usu·rio*/
+     //scanf("%s%*c",Frase); // ler uma linha de texto do usu√°rio
+     fgets(Frase, 100, stdin); // ler uma linha de texto do usu√°rio*/
 
     do
     {
@@ -52,11 +47,11 @@ int main()
         {
 
         case 1:
-            //ComeÁo da criaÁao da matriz
+            //Come√ßo da cria√ßao da matriz
             // verificando se o det da matriz eh diferente de 0
             do
             {
-                // preenche a matriz com n˙meros aleatÛrios
+                // preenche a matriz com n√∫meros aleat√≥rios
                 for (int i = 0; i < 2; i++)
                 {
                     for (int j = 0; j < 2; j++)
@@ -99,58 +94,58 @@ int main()
                 printf("\n");
             }
             printf("\n");
-//Fim da criaÁao da matriz
+//Fim da cria√ßao da matriz
             break;
 
         case 2:
 
-            //ComeÁo da leitura da frase e transformar ela em Uma sequencia de numeros
+            //Come√ßo da leitura da frase e transformar ela em Uma sequencia de numeros
 
             printf("Digite uma frase a ser codificada: ");
-            //scanf("%s%*c",Frase); // ler uma linha de texto do usu·rio
-            fgets(Frase, 100, stdin); // ler uma linha de texto do usu·rio
+            //scanf("%s%*c",Frase); // ler uma linha de texto do usu√°rio
+            fgets(Frase, 100, stdin); // ler uma linha de texto do usu√°rio
 
             n = strlen(Frase)-1;
             for (i = 0; i < n; i++)
             {
                 if (Frase[i] == ' ')
                 {
-                    printf(" "); // imprime um espaÁo em branco para separar as palavras
-                    sequencia[i] = 29; // armazena 29 para espaÁos em branco
+                    printf(" "); // imprime um espa√ßo em branco para separar as palavras
+                    sequencia[i] = 29; // armazena 29 para espa√ßos em branco
                 }
                 else
                 {
                     letra = Frase[i];
                     for (j = 0; j < 29; j++)
                     {
-                        if (toupper(letra) == 'A' + j)   // converte letra mai˙scula para n˙mero (de 01 a 10)
+                        if (toupper(letra) == 'A' + j)   // converte letra mai√∫scula para n√∫mero (de 01 a 10)
                         {
                             sequencia[i] = j+1;
                             break;
                         }
-                        else if (toupper(letra) == 'K' + j - 10)  // converte letra mai˙scula para n˙mero (de 11 a 20)
+                        else if (toupper(letra) == 'K' + j - 10)  // converte letra mai√∫scula para n√∫mero (de 11 a 20)
                         {
                             sequencia[i] = j+11;
                             break;
                         }
-                        else if (toupper(letra) == 'U' + j - 20)  // converte letra mai˙scula para n˙mero (de 21 a 29)
+                        else if (toupper(letra) == 'U' + j - 20)  // converte letra mai√∫scula para n√∫mero (de 21 a 29)
                         {
                             sequencia[i] = j+21;
                             break;
                         }
                         else if (Frase[i] == '.')
                         {
-                            sequencia[i] = 27; // converte ponto para n˙mero 27
+                            sequencia[i] = 27; // converte ponto para n√∫mero 27
                             break;
                         }
                         else if (Frase[i] == ',')
                         {
-                            sequencia[i] = 28; // converte vÌrgula para n˙mero 28
+                            sequencia[i] = 28; // converte v√≠rgula para n√∫mero 28
                             break;
                         }
                         else if (Frase[i] == '#')
                         {
-                            sequencia[i] = 29; // converte cerquilha para n˙mero 29
+                            sequencia[i] = 29; // converte cerquilha para n√∫mero 29
                             break;
                         }
                     }
@@ -164,10 +159,10 @@ int main()
             break;
 
         case 3:
-//ComeÁo imprimir mensagem codificada
+//Come√ßo imprimir mensagem codificada
             printf("\n");
             printf("Sua mensagem codificada eh:\n");
-            // Imprime a sequÍncia de n˙meros armazenada no vetor
+            // Imprime a sequ√™ncia de n√∫meros armazenada no vetor
             for (i = 0; i < n; i++)
             {
                 printf(" %d", sequencia[i]);
@@ -211,7 +206,7 @@ int main()
                 printf("\n");
             }
 
-            //ComeÁo das operaÁoes da matriz com a matriz sequencia
+            //Come√ßo das opera√ßoes da matriz com a matriz sequencia
 
             int matrizR[2][99];
             int p;
@@ -231,7 +226,7 @@ int main()
             }
 
             printf("\n");
-            printf("O Resultado da multiplicaÁao da matriz gerada pela matriz sequencia eh:\n");
+            printf("O Resultado da multiplica√ßao da matriz gerada pela matriz sequencia eh:\n");
             for (int i = 0; i < 2; i++)
             {
                 for (int j = 0; j < div; j++)
@@ -240,9 +235,9 @@ int main()
                 }
                 printf("\n");
             }
-//Fim das operaÁoes da matriz com a matriz sequencia
+//Fim das opera√ßoes da matriz com a matriz sequencia
             printf("\n");
-//ComeÁo das operaÁoes da matriz inversa da matriz gerada com a matriz sequencia
+//Come√ßo das opera√ßoes da matriz inversa da matriz gerada com a matriz sequencia
             int matrizRI[2][99];
 
             for (i = 0; i < 2; i++)
@@ -257,7 +252,7 @@ int main()
                 }
             }
 
-            printf("O Resultado da multiplicaÁao da matriz inversa gerada pela matriz sequencia eh:\n");
+            printf("O Resultado da multiplica√ßao da matriz inversa gerada pela matriz sequencia eh:\n");
             for (int i = 0; i < 2; i++)
             {
                 for (int j = 0; j < div; j++)
@@ -266,7 +261,7 @@ int main()
                 }
                 printf("\n");
             }
-//Fim das operaÁoes da matriz inversa da matriz gerada com a matriz sequencia
+//Fim das opera√ßoes da matriz inversa da matriz gerada com a matriz sequencia
             break;
 
         case 4:
